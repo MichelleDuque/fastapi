@@ -1,1 +1,1 @@
-[]
+[{"user_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "email": "michelle@example.com", "first_name": "michelle", "last_name": "duque", "birth_date": "2022-05-27", "password": "holasoymichelle"}, {"user_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "email": "paola@example.com", "first_name": "paola", "last_name": "de la rosa", "birth_date": "2022-05-27", "password": "holasoypaola"}, {"user_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "email": "gary@example.com", "first_name": "gary", "last_name": "duque", "birth_date": "2022-05-27", "password": "holasoygary"}]
