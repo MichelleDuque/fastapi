@@ -127,18 +127,17 @@ def show_all_users():
     """
     This path operation shows all users in the app
 
-    Parameters:
-        - 
+    Parameters: 
+        -
 
-    Returns a json list with all users in the app with the following keys:
+    Returns a json list with all users in the app, with the following keys: 
         - user_id: UUID
         - email: Emailstr
         - first_name: str
         - last_name: str
         - birth_date: datetime
     """
-
-    with open("users.json", "r", encoding="utf-8") as f:
+    with open("users.json", "r", encoding="utf-8") as f: 
         results = json.loads(f.read())
         return results
 
@@ -205,14 +204,14 @@ def post(tweet: Tweet = Body(...)):
 
     Parameters: 
         - Request body parameter
-            - tweet: tweet
+            - tweet: Tweet
     
     Returns a json with the basic tweet information: 
-            tweet_id: UUID 
-        content: str 
-        created_at: datetime 
-        updated_at: Optional[datetime] 
-        by: User 
+        tweet_id: UUID  
+        content: str    
+        created_at: datetime
+        updated_at: Optional[datetime]
+        by: User
     """
     with open("tweets.json", "r+", encoding="utf-8") as f: 
         results = json.loads(f.read())
@@ -222,6 +221,7 @@ def post(tweet: Tweet = Body(...)):
         tweet_dict["updated_at"] = str(tweet_dict["updated_at"])
         tweet_dict["by"]["user_id"] = str(tweet_dict["by"]["user_id"])
         tweet_dict["by"]["birth_date"] = str(tweet_dict["by"]["birth_date"])
+
         results.append(tweet_dict)
         f.seek(0)
         f.write(json.dumps(results))
